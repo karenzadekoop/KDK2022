@@ -1,0 +1,443 @@
+:root {
+    --hoofdKleur: #35774B;
+    --accentKleur: white;
+    --fontKleur: black;
+    --extraKleur: #F9F8F8;
+    --hoverKleur: #E8F8C5;
+    --buttonHover: #2D663A;
+    --extraBackground: #F7F8F7
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--fontKleur);
+    background-color: var(--extraKleur);
+    margin: 0;
+}
+
+/* ********************** */
+/* *******HEADER******** */
+/************************ */
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--extraKleur);
+    padding-left: 1em;
+    padding-right: 3em;
+    /* position: sticky; */
+    /* werkt niet */
+}
+
+/* logo  */
+header h1 {
+    margin: 0;
+}
+
+header img {
+    width: 3em;
+    height: auto;
+    display: block;
+}
+
+/* header is breedte van hele pagina , dat laat de inlog button*/
+header nav {
+    flex-grow: 1;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2em;
+}
+
+header nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--fontKleur);
+    padding: .3em;
+}
+
+/* direct child dus inloggen */
+header>a {
+    text-decoration: none;
+    color: var(--hoofdKleur);
+
+}
+
+/* ??hoe maak ik het de hele ding groen */
+header a:hover {
+    background-color: var(--hoverKleur);
+    color: var(--hoofdKleur);
+    font-weight: bold;
+}
+
+/* ***************** */
+/* *****banner****** */
+/* ****************** */
+
+main section:nth-of-type(1) img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+main section:nth-of-type(1) div {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.5em;
+}
+
+/* ??hoe maak ik die lijn (wss is die andere text js */
+main section:nth-of-type(1) div h2 {
+    font-weight: normal;
+    font-size: 3em;
+    line-height: 0em;
+    letter-spacing: -0.3px;
+}
+
+main section:nth-of-type(1) div p {
+    max-width: 28em;
+    font-size: 1em;
+}
+
+main section:nth-of-type(1) div a {
+    text-transform: none;
+    text-decoration: none;
+    padding: 0.75em 2.25em;
+    display: inline-block;
+    font-size: 1em;
+    color: var(--accentKleur);
+    background-color: var(--hoofdKleur);
+    border-radius: .2em;
+    box-shadow: .3em .3em .3em var(--extraBackground);
+}
+
+main section:nth-of-type(1) div a:hover {
+    background-color: var(--buttonHover);
+    box-shadow: none;
+}
+
+/* ************* */
+/* een kijkje    */
+/* ************* */
+
+main section:nth-of-type(2) h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: -0.3px;
+    text-align: center;
+    padding: 1em 0em 1em 0;
+}
+
+main section:nth-of-type(2)>p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 1.8em;
+}
+
+main section:nth-of-type(2) ul {
+    list-style-type: none;
+    display: flex;
+    max-width: 100%;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    gap: 1em;
+}
+
+main section:nth-of-type(2) ul li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+main section:nth-of-type(2) ul img {
+    height: 18em;
+    width: 14em;
+    order: -1;
+
+}
+
+main section:nth-of-type(2) ul h3 {
+    font-weight: 550;
+    padding-top: 1em;
+}
+
+main section:nth-of-type(2) ul p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.25em;
+    color: var(--fontKleur);
+    font-size: 0.8em;
+    width: 70%;
+}
+
+
+
+/* ??hoe add ik een line in between the sections */
+
+/* ************* */
+/* zo werkt het* */
+/* ************* */
+
+main section:nth-of-type(3) h2 {
+    font-size: 1.5em;
+    font-weight: 200;
+    letter-spacing: -0.3px;
+    text-align: center;
+    padding: 1em 0em 1em 0;
+}
+
+main section:nth-of-type(3)>p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.25em;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 1.8em;
+}
+
+main section:nth-of-type(3) ul {
+    list-style-type: none;
+    display: flex;
+    max-width: 100%;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    gap: 1em;
+}
+
+main section:nth-of-type(3) ul li {
+    display: flex;
+    flex-direction: column;
+
+}
+
+main section:nth-of-type(3) ul img {
+    height: 10em;
+    width: 14em;
+    order: -1;
+
+}
+
+main section:nth-of-type(3) ul h3 {
+    font-weight: normal;
+    width: 13em;
+}
+
+main section:nth-of-type(3) ul p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.25em;
+    color: var(--fontKleur);
+    font-size: 0.8em;
+    width: 14em;
+    margin-top: 0;
+}
+
+/* button */
+main section:nth-of-type(3)>a {
+    text-transform: none;
+    text-decoration: none;
+    padding: 0.75em 2.25em;
+    display: inline-block;
+    font-size: 1em;
+    color: var(--hoofdKleur);
+    /* border-color: var(--hoofdKleur);   */
+    border-radius: .2em;
+    box-shadow: .3em .3em .3em lightgrey;
+}
+
+/* hover moet nog */
+
+/* border color werkt niet  ook boven/ */
+/* button midden */
+
+
+/* ************ */
+/* goed voor je */
+/* ************ */
+
+main section:nth-of-type(4) {
+    margin-left: 1.5em;
+    display: flex;
+    background-color: var(--extraBackground);
+}
+
+main section:nth-of-type(4)>img {
+    width: 50%;
+    height: auto;
+    order: -100;
+    flex-direction: row;
+}
+
+main section:nth-of-type(4) article {
+    flex-direction: column;
+}
+
+/* main section:nth-of-type(4) h3 { */
+
+/* hoe doe ik dit */
+/* } */
+
+main section:nth-of-type(4) a {
+    text-transform: none;
+    text-decoration: none;
+    padding: 0.75em 2.25em;
+    display: inline-block;
+    font-size: 1em;
+    color: var(--extraKleur);
+    background-color: var(--hoofdKleur);
+    /* border-color: var(--hoofdKleur);   */
+    border-radius: .2em;
+    box-shadow: .3em .3em .3em lightgrey;
+}
+
+main section:nth-of-type(4) a:hover {
+    background-color: var(--buttonHover);
+    box-shadow: none;
+}
+
+/* ************* */
+/* *jouw smaak** */
+/* ************* */
+
+main section:nth-of-type(5) {
+    margin-left: 7em;
+    margin-right: 8em;
+}
+
+main section:nth-of-type(5) h2 {
+    font-size: 1.5em;
+    font-weight: 200;
+    letter-spacing: -0.3px;
+    text-align: center;
+    padding: 1em 0em 1em 0;
+}
+
+main section:nth-of-type(5)>p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.25em;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 1.8em;
+}
+
+main section:nth-of-type(5) ul {
+    display: flex;
+    overflow: scroll;
+    gap: 1.5em;
+}
+
+main section:nth-of-type(5) ul li {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+main section:nth-of-type(5) ul li img {
+    width: 16em;
+    height: 20em;
+}
+
+/* pijltjes moeten nog */
+
+main section:nth-of-type(5)>a {
+    text-transform: none;
+    text-decoration: none;
+    padding: 0.75em 2.25em;
+    display: inline-block;
+    font-size: 1em;
+    color: var(--hoofdKleur);
+    /* border-color: var(--hoofdKleur);   */
+    border-radius: .2em;
+    box-shadow: .3em .3em .3em lightgrey;
+}
+
+/* hover van button moet nog en midden  */
+
+/* **************** */
+/* zo denken ze     */
+/* **************** */
+
+main section:nth-of-type(6) h3 {
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: -0.3px;
+    text-align: center;
+}
+
+main section:nth-of-type(6) ul {
+    display: flex;
+    gap: 3em;
+    text-align: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+main section:nth-of-type(6) ul li {
+    list-style-type: none;
+    font-size: 1em;
+    width: 50%;
+}
+
+main section:nth-of-type(6) ul img {
+    order: -1;
+}
+
+
+
+/* ***************** */
+/* bottom baner **** */
+/* ***************** */
+
+main section:nth-of-type(7) img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+main section:nth-of-type(7) h2 p a {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.5em;
+}
+
+main section:nth-of-type(7) h2 {
+    font-size: 3em;
+    line-height: 0em;
+    letter-spacing: -0.3px;
+}
+
+main section:nth-of-type(7) p {
+    max-width: 28em;
+    font-size: 1em;
+}
+
+main section:nth-of-type(7) a {
+    text-transform: none;
+    text-decoration: none;
+    padding: 0.75em 2.25em;
+    display: inline-block;
+    font-size: 1em;
+    color: var(--accentKleur);
+    background-color: var(--hoofdKleur);
+    border-radius: .2em;
+    box-shadow: .3em .3em .3em lightgrey;
+}
+
+main section:nth-of-type(7) div a:hover {
+    background-color: var(--buttonHover);
+    box-shadow: none;
+}
